@@ -1,15 +1,34 @@
 {
   "name": "gerenciadortarefas",
-  "private": true,
   "version": "0.0.0",
+  "description": "",
+  "private": true, 
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check": "tsc --noEmit"
   },
+  "keywords": [
+    "typescript",
+    "vite",
+    "frontend",
+    "task-manager"
+  ],
+  "author": "Jorge Borges",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jorgebytecraft/GerenciaodorTarafa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jorgebytecraft/GerenciaodorTarafa.git/issues"
+  },
+
+  "homepage": "https://github.com/jorgebytecraft/GerenciaodorTarafa.git#readme",
   "devDependencies": {
     "typescript": "^5.5.4",
-    "vite": "^7.1.7"
+    "vite": "^7.0.0"
   }
 }
