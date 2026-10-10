@@ -1,13 +1,84 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div id="app"></div>
+<script type="module" src="./src/main.ts"></script>
+<body class="area-page">
+
+    <header class="header">
+        <div class="header-container">
+            <div class="card card-body m-3">
+                <h1 class="display-5 m-3">To Do List</h1>
+            </div>
+        </div>
+    </header>
+
+    <aside class="aside">
+     <div class="aside-container">
+        <div class="card card-body m-3">
+            <h5>Lista de Tarefas</h5>
+            <ul class="list-group list-group-flush m-3">
+                        
+            </ul>
+        </div>
+     </div>
+      
+     <div class="aside-container">
+        <div class="card card-body m-3">
+            <h5>Lista em Andamentos</h5>
+            <ul class="list-group list-group-flush m-3">
+                          
+            </ul>
+        </div>
+     </div>
+
+      <div class="aside-container">
+        <div class="card card-body m-3">
+            <h5>Lista Concluida</h5>
+            <ul class="list-group list-group-numbered m-3">
+
+            </ul>
+        </div>
+     </div>
+
+    </aside>
+
+    <main class="main">
+        <div class="main-container">
+            <div class="card card-body flex-row gap-3">
+                <input type="text" placeholder="Nova Tarefa">
+                <botton class="btn btn-primary">Adicionar Tarefas</botton>                
+            </div>
+        </div>
+
+        <div class="main-container">
+            <div class="card card-body flex-row gap-3">
+                <input type="text" placeholder="Tarefa">
+                <botton class="btn btn-danger">Adicionar Tarefas em Andamento</botton>
+            </div>
+        </div>
+
+        <div class="main-container">
+            <div class="card card-body flex-row gap-3">
+                <input type="text" placeholder="Tarefa Concluída">
+                <botton class="btn btn-success">Adicionar Tarefas Concluídas</botton>                
+            </div>
+        </div>
+
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="card card-body m-3">
+                <h5> Gerenciador de Tarefas</h5>
+                <p>Desenvolvido por: Jorge Borges</p>              
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

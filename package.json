@@ -2,7 +2,7 @@
   "name": "gerenciadortarefas",
   "version": "0.0.0",
   "description": "",
-  "private": true, 
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -25,10 +25,12 @@
   "bugs": {
     "url": "https://github.com/jorgebytecraft/GerenciaodorTarafa.git/issues"
   },
-
   "homepage": "https://github.com/jorgebytecraft/GerenciaodorTarafa.git#readme",
   "devDependencies": {
     "typescript": "^5.5.4",
     "vite": "^7.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
   }
 }
