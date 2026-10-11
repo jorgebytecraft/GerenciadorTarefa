@@ -6,11 +6,9 @@
     <title>Gerenciador de Tarefas</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<div id="app"></div>
-<script type="module" src="./src/main.ts"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-<body class="area-page">
 
+<body class="area-page">
+<div id="app"></div>
     <header class="header">
         <div class="header-container">
             <div class="card card-body m-3">
@@ -54,7 +52,7 @@
             <div class="card card-body">
                 <div class="input-group gap-5"> 
                     <input data-js="adicionar-tarefa" type="text" placeholder="Nova Tarefa" class="form-control">              
-                    <botton data-js="botao-tarefa-iniciada"  class="btn btn-outline-primary btn-sm">Adicionar Tarefas</botton>                      
+                    <button data-js="botao-tarefa-iniciada"  class="btn btn-outline-primary btn-sm">Adicionar Tarefas</botton>                      
                 </div>              
             </div>
         </div>
@@ -63,7 +61,7 @@
             <div class="card card-body">
                 <div class="input-group gap-5"> 
                     <input data-js="andamento-tarefa" type="text" placeholder="Tarefa" class="form-control">
-                    <botton data-js="botao-tarefa-andamento" class="btn btn-outline-danger btn-sm">Adicionar Tarefas em Andamento</botton>
+                    <button data-js="botao-tarefa-andamento" class="btn btn-outline-danger btn-sm">Adicionar Tarefas em Andamento</botton>
                 </div>
             </div>
         </div>
@@ -72,7 +70,7 @@
             <div class="card card-body">
                 <div class="input-group gap-5">
                     <input data-js="finalizar-tarefa" type="text" placeholder="Tarefa Concluída" class="form-control" >
-                    <botton data-js="botao-tarefa-finaliza" class="btn btn-outline-success btn-sm">Adicionar Tarefas Concluídas</botton>                
+                    <button data-js="botao-tarefa-finaliza" class="btn btn-outline-success btn-sm">Adicionar Tarefas Concluídas</botton>                
                 </div>
             </div>
         </div>
@@ -89,4 +87,6 @@
     </footer>
 
 </body>
+<script type="module" src="./src/main.ts"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </html>

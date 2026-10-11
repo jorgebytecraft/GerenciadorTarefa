@@ -38,7 +38,7 @@ export class TaskController {
         this.view.finalizarTarefa(() => {
             const valor = this.view.getValorFinalizarTarefa();
             if(!valor)return;
-            this.model.mudarStatus(valor, "Finalizado" as StatusTarefa);
+            this.model.mudarStatus(valor, "Concluida" as StatusTarefa);
             this.view.renderizar(this.model.getTarefa());
             this.view.limparInputs();
         });
