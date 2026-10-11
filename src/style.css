@@ -26,10 +26,12 @@
 .area-page aside {
     grid-area: aside;
     background-color: lightgrey;
+    border-radius: 5px;    
 }
 .area-page main {
     grid-area: main;
     background-color: lightgrey;
+    border-radius: 5px;
 }
 .area-page footer {
     grid-area: footer;
@@ -38,32 +40,26 @@
 .header-container{
   display: flex;
   flex-direction: row;
-  justify-content:space-around;
   align-items: center;
+  background-color: lightblue;
 
-  background-color: lightgrey;  
 } 
 
 .aside-container{
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-
-  background-color: lightgrey;  
+  background-color: lightblue;
+  
 } 
 
 .main-container{
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10px;
-
-  height: 30%;
   margin: 10px;
-  background-color: lightgrey;
   
 } 
 .footer-container{
@@ -73,8 +69,9 @@
   align-items: center;
   gap: 10px;
 
-  background-color: lightgrey;
-} 
+  background-color: lightblue;
+}
+
 
 @media(max-width: 768px){
   .area-page {
