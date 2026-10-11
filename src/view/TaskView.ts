@@ -29,9 +29,9 @@ export class TaskView{
         this.tarefaAndamento = document.querySelector('[data-js="andamento-tarefa"]') as HTMLInputElement;
         this.tarefaFinalizada = document.querySelector('[data-js="finalizar-tarefa"]') as HTMLInputElement;
 
-        this.listaIniciada = document.querySelector('[data-js="lista-tarefas-iniciada"]') as HTMLUListElement || [];
-        this.listaAndamento = document.querySelector('[data-js="lista-tarefas-andamento"]') as HTMLUListElement || [];
-        this.listaFinalizada = document.querySelector('[data-js="lista-tarefas-finaliza"]') as HTMLUListElement || [];
+        this.listaIniciada = document.querySelector('[data-js="lista-tarefas-iniciada"]') as HTMLUListElement;
+        this.listaAndamento = document.querySelector('[data-js="lista-tarefas-andamento"]') as HTMLUListElement;
+        this.listaFinalizada = document.querySelector('[data-js="lista-tarefas-finaliza"]') as HTMLUListElement;
 
         if(!this.botaoAdicionar || ! this.listaIniciada){
             throw new Error ('Elemento data-js não encontrado no HTML. ')
@@ -46,7 +46,7 @@ export class TaskView{
         //Renderizar
         for(const tarafa of tarefas){
             const linhaNova = document.createElement("li");
-            linhaNova.classList.add("list-group.item");
+            linhaNova.classList.add("list-group-item");
             linhaNova.textContent = tarafa.nome;
             if(tarafa.status === "Lista de Tarefa"){
                 this.listaIniciada.appendChild(linhaNova);
