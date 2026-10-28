@@ -1,29 +1,34 @@
-import {TaskService} from '../service/TaskService';
-import { Tarefa, StatusTarefa } from '../types/Task';
+import { TaskService } from "../service/TaskService";
+import { Tarefa, StatusTarefa } from "../types/Task";
 
 export class TaskModel {
-    private tarefas: Tarefa[] = [];
-    private services = new TaskService();
+  //ESTADO
+  private tarefas: Tarefa[] = [];
 
-    async carregarDaApi(): Promise<Tarefa[]> {
-        this.tarefas = await this.services.buscarTarefas();
-        return this.getTarefa()
-    };
+  //INTEGRACAO COM SERVICE
+  private services = new TaskService();
 
-    async adicionar(nome: string): Promise<void> {
-        const tarefa =  await this.services.criarTarefa(nome);
-        this.tarefas.push(tarefa);
-    };
+  //COMPORTAMENTO
+  async carregarDaApi(): Promise<Tarefa[]> {
+    this.tarefas = await this.services.buscarTarefas();
+    return this.getTarefa();
+  }
 
-    mudarStatus(nome: string , status: StatusTarefa): void{
-        const tarefa = this.tarefas.find(t => t.nome.toLowerCase() === nome.toLowerCase());
-            if(tarefa){
-                tarefa.status = status;
-            }
-    };
+  async adicionar(nome: string): Promise<void> {
+    const tarefa = await this.services.criarTarefa(nome);
+    this.tarefas.push(tarefa);
+  }
 
-    getTarefa(): Tarefa[] {
-        return [...this.tarefas]
+  mudarStatus(nome: string, status: StatusTarefa): void {
+    const tarefa = this.tarefas.find(
+      (t) => t.nome.toLowerCase() === nome.toLowerCase(),
+    );
+    if (tarefa) {
+      tarefa.status = status;
     }
+  }
 
-};
+  getTarefa(): Tarefa[] {
+    return [...this.tarefas];
+  }
+}
