@@ -1,4 +1,4 @@
-import type { Tarefa, RespostTarefa } from "../types/Task";
+import { RespostTarefa, Tarefa } from "../interface/TaskInterface";
 
 export class TaskService {
   private readonly apiUrl = "https://jsonplaceholder.typicode.com/todos";

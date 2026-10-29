@@ -1,5 +1,6 @@
 import { TaskService } from "../service/TaskService";
-import { Tarefa, StatusTarefa } from "../types/Task";
+import { StatusTarefa } from "../types/Task";
+import { Tarefa } from "../interface/TaskInterface";
 
 export class TaskModel {
   //ESTADO

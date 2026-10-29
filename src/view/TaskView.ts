@@ -1,4 +1,5 @@
-import type { Tarefa, Handler } from "../types/Task";
+import type { Handler } from "../types/Task";
+import { Tarefa } from "../interface/TaskInterface";
 
 //REFERENCIA NO DOM
 export class TaskView {
