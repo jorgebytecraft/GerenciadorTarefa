@@ -1,85 +1,81 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .area-page {
-    display: grid;
-    grid-template-areas:
-        'header header header'
-        'aside main main'
-        'footer footer footer';
-        grid-template-rows: auto 2fr auto;
-        grid-template-columns: repeat(3,1fr);
-        gap: 10px;
-        width: 100%;
-        min-height: 100vh;
-        background-color: gray;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "aside main main"
+    "footer footer footer";
+  grid-template-rows: auto 2fr auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .area-page header {
-    grid-area: header;
-    background-color: lightgrey;
+  grid-area: header;
+  background-color: lightgrey;
 }
 .area-page aside {
-    grid-area: aside;
-    background-color: lightgrey;
-    border-radius: 5px;    
+  grid-area: aside;
+  background-color: lightgrey;
+  border-radius: 5px;
 }
 .area-page main {
-    grid-area: main;
-    background-color: lightgrey;
-    border-radius: 5px;
+  grid-area: main;
+  background-color: lightgrey;
+  border-radius: 5px;
 }
 .area-page footer {
-    grid-area: footer;
-    background-color: lightgrey;
+  grid-area: footer;
+  background-color: lightgrey;
 }
-.header-container{
+.header-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: lightblue;
+}
 
-} 
-
-.aside-container{
+.aside-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
   background-color: lightblue;
-  
-} 
+}
 
-.main-container{
+.main-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 10px;
-  
-} 
-.footer-container{
+  background-color: lightblue;
+}
+.footer-container {
   display: flex;
   flex-direction: row;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
   gap: 10px;
 
   background-color: lightblue;
 }
 
-
-@media(max-width: 768px){
+@media (max-width: 768px) {
   .area-page {
     grid-template-areas:
-        'header'
-        'main'
-        'aside'
-        'footer';
+      "header"
+      "main"
+      "aside"
+      "footer";
     grid-template-rows: auto 2fr auto auto;
     grid-template-columns: 1fr;
   }
